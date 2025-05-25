@@ -45,7 +45,7 @@ Ensure you have the following installed on your system:
    ```
 2. Navigate to the project directory:
    ```bash
-   cd SPixel-Markup
+   cd spixel-tailwind
    ```
 3. Install dependencies:
    ```bash
