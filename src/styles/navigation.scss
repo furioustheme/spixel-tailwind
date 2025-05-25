@@ -1,0 +1,29 @@
+// navbar toggler
+input#nav-toggle:checked + label #show-button {
+  @apply hidden;
+}
+
+input#nav-toggle:checked + label #hide-button {
+  @apply block;
+}
+
+input#nav-toggle:checked ~ #nav-menu {
+  @apply block;
+}
+
+.header {
+  @apply bg-body py-4;
+}
+
+// navbar items
+.navbar {
+  @apply relative flex flex-wrap items-center justify-between;
+}
+
+.navbar-nav {
+  @apply text-center lg:text-left;
+}
+
+.nav-link {
+  @apply text-dark hover:text-primary  p-3 font-normal transition lg:px-2 lg:py-3 text-lg flex flex-col items-center justify-center;
+}

@@ -1,0 +1,60 @@
+@@include('page-header.html', { "title": "Pricing", "pageurl":"pricing.html",image:"images/page-header-pricing.png" })
+
+<!-- Start Pricing Section -->
+<section class="section animate-section">
+  <div class="container">
+    <!-- section header-->
+    <div class="row gap-y-6 mb-10" data-aos="fade-up">
+      <div class="md:col-8">
+        <div class="relative">
+          <svg
+            class="absolute top-10 right-0 hidden xl:block"
+            width="64"
+            height="33"
+            viewBox="0 0 64 33"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M36.3385 16.5762C33.3807 17.3853 29.0522 17.8143 25.3686 18.3974C24.3037 18.5924 22.3378 18.6457 21.756 19.4365C21.1969 20.2014 21.8881 22.1153 22.126 22.9755C22.4854 24.2902 22.908 25.2688 23.3354 26.4028C16.5623 28.3621 9.74456 29.1475 2.83891 30.2918C1.92469 30.4307 0.649027 30.5341 0.128029 31.5255C0.662164 32.7568 2.17842 32.3379 3.17272 32.2729C9.68125 32.0352 16.0085 30.4532 22.76 29.2616C23.7763 29.1193 25.306 29.0579 25.9378 28.2143C26.7162 27.2118 25.7311 25.5642 25.3611 24.6329C24.8489 23.3243 24.4983 22.2142 24.0182 21.0836C27.5737 20.5321 31.8947 19.897 35.9131 19.3782C37.0567 19.2037 41.0193 19.2246 40.0652 17.1162C39.8109 16.4882 38.9737 16.0108 38.3892 15.4191C36.7398 13.7988 34.556 11.5861 33.2702 10.1049C40.4397 9.79256 48.1192 9.40564 55.3944 7.27328C54.3437 7.87856 53.3697 8.40225 52.1197 9.11773C51.3436 9.53263 49.1108 10.5671 49.8169 11.6121C50.4962 12.6325 52.4416 11.4302 53.1463 11.1461C55.9613 9.96034 57.0427 9.53316 59.7326 7.73724C60.1806 7.41266 60.7246 6.98272 61.3252 6.65067C62.326 6.0995 63.5993 5.35872 62.8926 4.3144C62.2959 3.41727 60.5973 3.12883 59.6374 2.78297C57.4296 1.92685 55.5593 1.13231 53.2965 0.815092C52.2948 0.676653 50.8467 0.274589 50.2116 1.01613C49.2592 2.10137 50.9302 3.00612 51.6859 3.35882C52.9079 3.89854 53.815 4.19306 54.7194 4.43828C54.7974 4.45951 54.8461 4.40679 54.9262 4.48072C47.7554 6.07288 39.6288 7.36977 31.953 7.16775C31.0314 7.15401 28.5711 6.94489 28.6566 8.50144C28.6823 9.11357 29.5715 9.64025 30.1806 10.1518C31.9306 11.7687 34.2283 14.9223 36.3385 16.5762Z"
+              class="fill-primary animated-path"
+            />
+          </svg>
+
+          <h2 class="mb-3">Choose your flexible plan</h2>
+          <p class="md:w-8/12">
+            Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco
+            cillum dolor.duis ullamco cillum dolorduis ullamco cillum dolor.
+          </p>
+        </div>
+      </div>
+      <div class="md:col-4 flex items-end justify-end">
+        <div>
+          <button class="btn btn-primary billToggle btn-lg px-5" onclick="toggleBilling(this)" data-bill="monthly">Bill monthly</button>
+          <button class="btn billToggle btn-lg px-5" onclick="toggleBilling(this)" data-bill="annually">Bill annually</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- pricing tabel -->
+    <div class="row py-16 gap-y-10">
+      <div class="md:col-6 lg:col-4" data-aos="fade-right">
+       @@include("components/price-card.html",{ name:"Basic", client:"20 - 50 Clients", price:"1.99",featureOneIcon:"text-primary",featureTwoIcon:"text-primary",featureThreeIcon:"",featureFourIcon:"",featureFiveIcon:"",featureOneText:"text-dark",featureTwoText:"text-dark",featureThreeText:"",featureFourText:"",featureFiveText:""})
+      </div>
+      <div class="md:col-6 lg:col-4" data-aos="fade-up">
+       @@include("components/price-card.html",{ name:"Professional", client:"Less than 20 Clients", price:"2.99",featureOneIcon:"text-primary",featureTwoIcon:"text-primary",featureThreeIcon:"text-primary",featureFourIcon:"",featureFiveIcon:"",featureOneText:"text-dark",featureTwoText:"text-dark",featureThreeText:"text-dark",featureFourText:"",featureFiveText:""})
+      </div>
+      <div class="md:col-6 lg:col-4" data-aos="fade-left">
+       @@include("components/price-card.html",{ name:"Ultimate", client:"50+ Clients", price:"8.99",featureOneIcon:"text-primary",featureTwoIcon:"text-primary",featureThreeIcon:"text-primary",featureFourIcon:"text-primary",featureFiveIcon:"text-primary",featureOneText:"text-dark",featureTwoText:"text-dark",featureThreeText:"text-dark",featureFourText:"text-dark",featureFiveText:"text-dark"})
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Pricing Section -->
+
+<!-- Start Call To Action Section -->
+@@include('call-to-action.html')
+<!-- End Call To Action Section -->

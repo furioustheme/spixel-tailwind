@@ -1,0 +1,21 @@
+<div class="modal" data-modal>
+  <div class="modal-overlay" data-modal-close data-modal-overlay></div>
+  <div class="modal-content max-w-[600px]">
+    <div
+      class="youtube-facade relative pb-[56.25%] h-0 overflow-hidden bg-black"
+    >
+      <img
+        src="images/videothumb.jpg"
+        alt="YouTube Video Thumbnail"
+        class="absolute top-0 left-0 w-full h-full object-cover cursor-pointer"
+        onclick="loadYouTubeEmbed(this)"
+      />
+      <button
+        onclick="loadYouTubeEmbed(this)"
+        class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black/70 text-white text-2xl rounded-full p-4 hover:bg-black/90"
+      >
+        ▶
+      </button>
+    </div>
+  </div>
+</div>

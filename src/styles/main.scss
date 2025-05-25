@@ -1,0 +1,224 @@
+@use "sass:meta";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @include meta.load-css("base");
+}
+
+@layer components {
+  @include meta.load-css("components");
+  @include meta.load-css("navigation");
+  @include meta.load-css("buttons");
+}
+
+@layer utilities {
+  @include meta.load-css("utilities");
+}
+
+// section bg
+.section-bg {
+  background-image: url("../images/section-bg.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  inset: 0;
+  .overlay {
+    position: absolute;
+    z-index: -4;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(24, 1, 39, 0.88);
+  }
+}
+
+// section header
+.section-header {
+  @apply text-center;
+  h2 {
+    @apply mb-3;
+  }
+  p {
+    @apply sm:w-7/12 mx-auto;
+  }
+}
+
+// swiper
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-pagination-bullet {
+  @apply border border-primary bg-transparent w-4 h-4 rounded-full relative;
+}
+
+.swiper-pagination-bullet-active {
+  @apply border-2 border-primary relative flex items-center justify-center;
+
+  &::after {
+    content: "";
+    @apply w-2 h-2  bg-primary rounded-full   transform scale-110;
+  }
+}
+
+.shape-bg {
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  width: 110px;
+  height: 91px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.happy {
+  background-image: url("../images/happy-shap.png");
+}
+.active {
+  background-image: url("../images/active-shap.png");
+}
+.project {
+  background-image: url("../images/project-shap.png");
+}
+.client-card {
+  @apply xl:translate-x-52 xl:translate-y-36;
+  @media screen and (max-width: 1800px) {
+    @apply xl:translate-x-24 xl:translate-y-12;
+  }
+}
+.register-bg {
+  background-image: url("../images/register.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+// animated thunder
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  70% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated-thunder-svg path {
+  animation: slide 3s infinite linear;
+  transform-origin: center;
+}
+
+// animated path
+.animated-path {
+  @apply fill-none stroke-primary;
+  stroke-width: 2;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+}
+.animate-path-svg {
+  animation: draw 4s ease-in-out forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    @apply fill-primary stroke-none;
+  }
+}
+
+// animated line
+.animated-line {
+  fill: none;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+.animate-line-svg {
+  animation: draw-line 3s ease-in-out forwards;
+}
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+// animated svg fill fade
+@keyframes animate-svg-fill-fade {
+  0% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: rgb(35, 12, 51);
+  }
+}
+.svg-elem-1 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s
+    both;
+}
+
+.svg-elem-2 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s
+    both;
+}
+
+.svg-elem-3 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s
+    both;
+}
+
+.svg-elem-4 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s
+    both;
+}
+
+.svg-elem-5 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715)
+    1.2000000000000002s both;
+}
+
+.svg-elem-6 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s
+    both;
+}
+
+.svg-elem-7 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715)
+    1.4000000000000001s both;
+}
+
+.svg-elem-8 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5s
+    both;
+}
+
+.svg-elem-9 {
+  animation: animate-svg-fill-fade 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) 1.6s
+    both;
+}
+
+.animate-price-svg {
+  animation: draw-price-path 3s ease-in-out forwards;
+}
+
+@keyframes draw-price-path {
+  from {
+    stroke-dashoffset: 2500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

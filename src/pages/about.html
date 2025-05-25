@@ -1,0 +1,49 @@
+@@include('page-header.html', { "title": "About Us", "pageurl":"about.html",image:"images/page-header-about.png" })
+
+<!-- Start About Section -->
+@@include('components/about-section.html')
+<!-- End About Section -->
+
+<!-- Start Features Section -->
+@@include('components/features-section.html')
+<!-- End Features Section -->
+
+<!-- Start Team Section -->
+<section class="section ">
+    <div class="container">
+        <div class="relative" data-aos="fade-up">
+            <h2 class="md:w-8/12 mb-3" >
+                Our Successful Team
+            </h2>
+            <p class="md:w-6/12">
+                Professional advisor to help your business Amet minim mollit non
+                deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat.
+            </p>
+            <div class="absolute -bottom-10 right-20 w-44 h-44 bg-redish rounded-full blur-3xl opacity-30 -z-10"></div>
+        </div>
+        <div class="row py-16 gap-y-10">
+            <div class="sm:col-6 md:col-4 lg:col-3" data-aos="fade-up">
+              @@include('components/member-card.html',{name:"Tobby May",position:"Senior Degital Strategist",userImage:"images/member-1.png"})
+            </div>
+            <div class="sm:col-6 md:col-4 lg:col-3" data-aos="fade-up">
+              @@include('components/member-card.html',{name:"Daniel Orson",position:"Senior Degital Strategist",userImage:"images/member-2.png"})
+            </div>
+            <div class="sm:col-6 md:col-4 lg:col-3" data-aos="fade-up">
+              @@include('components/member-card.html',{name:"Matt Hopeson",position:"Senior Degital Strategist",userImage:"images/member-3.png"})
+            </div>
+            <div class="sm:col-6 md:col-4 lg:col-3" data-aos="fade-up">
+              @@include('components/member-card.html',{name:"Robbert Alvin",position:"Senior Degital Strategist",userImage:"images/member-4.png"})
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ed Team Section -->
+
+<!-- Start Client Section -->
+@@include('components/client-section.html')
+<!-- End Client Section -->
+
+<!--  Call To Action Section -->
+@@include('call-to-action.html')
+

@@ -1,0 +1,24 @@
+{
+  "colors": {
+    "default": {
+      "theme_color": {
+        "primary": "#731DD8",
+        "body": "#fff",
+        "border": "#230C33",
+        "theme_light": "#66665C"
+      },
+      "text_color": {
+        "default": "#66665C",
+        "dark": "#230C33",
+        "light": "#FFFFFF"
+      }
+    }
+  },
+  "fonts": {
+    "font_family": {
+      "primary": "Urbanist:wght@300;400;500;600;700",
+      "primary_type": "sans-serif"
+    },
+    "font_size": { "base": "16", "scale": "1.3" }
+  }
+}
